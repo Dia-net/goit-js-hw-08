@@ -98,7 +98,7 @@ onShow: instance =>{
     document.addEventListener('keydown', closeModal);
 },
 onClose: instance =>{
-    document.addEventListener('keydown', closeModal)
+    document.removeEventListener('keydown', closeModal)
 }
   }
   );
@@ -106,6 +106,6 @@ onClose: instance =>{
   instance.show();
 }
   function closeModal(e) {
-if (e.code === 'ESCAPE') instance.close();
+if (e.code === 'Escape') instance.close();
   }
 
